@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+	<script src="lib/jquery/jquery-3.1.1.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script src="lib/angular/1.6.2/angular.js"></script>
+	<script src="lib/angular/1.6.2/angular-animate.js"></script>
+	
+    <link rel="stylesheet" href="lib/usr/index.css">
+	<script src="lib/usr/index.js"></script>
+
+</head>
+
+<body ng-app='app'>
+
+<div ui-layout class="layout-main">
+  <div class="layout-row-top"></div>
+  <div class="layout-row-middle">
+    <div class="layout-col-left">
+      <div class="file-list-container" ng-controller="htmlFileListController">
+		<div class="file-list">
+		  <a class="" href="#" ng-repeat="file in list" ng-bind="file.name"></a>
+	    </div>
+	  </div>
+    </div>
+    <!--  -->
+    <div class="layout-col-right"></div>
+  </div>
+  <div class="layout-row-bottom"></div>
+</div>
+
+
+</body>
+
+</html>

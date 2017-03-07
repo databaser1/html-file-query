@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+	<script src="bower_components/angular/angular.js"></script>
+
+    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
+	<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+	
+    <link rel="stylesheet" href="lib/index.css">
+	<script src="lib/index.js"></script>
+
+</head>
+
+<body ng-app='app'>
+
+<div ui-layout class="layout-main">
+  <div class="layout-row-top"></div>
+  <div class="layout-row-middle">
+    <div class="layout-col-left">
+      <div class="file-list-container" ng-controller="htmlFileListController">
+		<div class="file-list">
+		  <a class="" ng-repeat="file in list" ng-bind="file.name" ng-click="selectFile()"></a>
+	    </div>
+	  </div>
+    </div>
+    <!--  -->
+    <div class="layout-col-right">
+    </div>
+  </div>
+  <div class="layout-row-bottom"></div>
+</div>
+
+
+</body>
+
+</html>

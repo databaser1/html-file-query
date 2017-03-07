@@ -1,0 +1,53 @@
+body {
+	font-family: Trebuchet MS1, Helvetica, sans-serif;
+}
+
+.layout-main {
+	display: block;
+}
+
+.layout-row-top {
+	width: 1600px;
+	height: 50px;
+	border-bottom: 1px solid #eee
+}
+.layout-row-bottom {
+	width: 1600px;
+	height: 50px;
+	border-top: 1px solid #eee
+}
+.layout-row-middle {
+	width: 1700px;
+	height: 800px;
+}
+.layout-col-left {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	height: 800px;
+	border-right: 1px solid #eee;
+	background-color: #f3f3f3;
+	padding: 15px 15px 15px 15px;
+}
+.layout-col-right {
+	display: inline-block;
+	vertical-align: top;
+	width: 1450px;
+	height: 800px;
+}
+
+.file-list-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+.file-list {
+	margin-left: 15px;
+}
+
+.file-list a {
+    display: block;
+    text-align: left;
+    color: darkgreen;
+    cursor: pointer;
+}

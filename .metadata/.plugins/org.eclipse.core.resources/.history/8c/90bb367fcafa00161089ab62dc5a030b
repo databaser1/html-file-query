@@ -1,0 +1,44 @@
+.ng-hide-add,
+.ng-hide-remove {
+  transition: all linear 1s;
+  display: block !important;
+}
+
+.ng-hide-add.ng-hide-add-active,
+.ng-hide-remove {
+  opacity: 0;
+}
+
+.ng-hide-add,
+.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+.layout-main {
+	display: block;
+	width: 1600px;
+	height: 900px;
+	
+	margin: 5px;
+	
+	background-color: #eee;
+}
+
+.layout-row-top {
+	width: 1590px;
+	height: 50px;
+	margin: 5px;
+	background-color: #fff;
+}
+.layout-row-bottom {
+	width: 1590px;
+	height: 50px;
+	background-color: #fff;
+	margin: 5px;
+}
+.layout-row-middle {
+	width: 1590px;
+	height: 800px;
+	margin: 5px;
+	background-color: #fff;
+}

@@ -1,0 +1,94 @@
+body {
+	font-family: Trebuchet MS1, Helvetica, sans-serif;
+}
+
+.layout-main {
+	display: block;
+}
+
+.layout-row-top {
+	width: 1600px;
+	height: 50px;
+	border-bottom: 1px solid #eee
+}
+.layout-row-bottom {
+	width: 1600px;
+	height: 50px;
+	border-top: 1px solid #eee
+}
+.layout-row-middle {
+	width: 1700px;
+	height: 800px;
+}
+.layout-col-left {
+	display: inline-block;
+	vertical-align: top;
+	width: 120px;
+	height: 800px;
+	border-right: 1px solid #eee;
+	background-color: #f3f3f3;
+	padding: 10px 10px 10px 15px;
+}
+.layout-col-right {
+	display: inline-block;
+	vertical-align: top;
+	width: 1480px;
+	height: 800px;
+	position: relative;
+}
+
+.file-list-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+.file-list {
+}
+
+.file-list a {
+    display: block;
+    color: darkgreen;
+    cursor: pointer;
+}
+
+.file-label {
+	display: block;
+	height:20px;
+}
+
+.html-view {
+	width: 1480px;
+	height: 400px;
+	padding-bottom: 5px;
+}
+
+iframe {
+	border: 2px dotted orange;
+	width: 100%;
+	height: 100%;
+}
+
+.html-text {
+	display: inline-block;
+	vertical-align: top;
+	width: 950px;
+	height: 380px;
+	position: absolute;
+	left: 0
+    bottom: 0;
+}
+.control-panel {
+	display: inline-block;
+	vertical-align: top;
+	width: 530px;
+	height: 380px;
+	position: absolute;
+	left: 950px;
+    bottom: 0;
+    padding-left: 5px;
+	border-left: 1px solid #eee;
+}
+.control-inline {
+	display: inline-block;
+	vertical-align: middle;
+}

@@ -1,0 +1,42 @@
+angular.module('app', []);
+
+angular.module('app')
+  .config(
+    [
+      '$controllerProvider', 
+      function($controllerProvider) {
+        $controllerProvider.allowGlobals();
+      }
+    ]
+  );
+
+angular.module('app')
+  .value('url', '');
+
+angular.module('app')
+  .controller(
+    'htmlFileListController', 
+    function($scope, $element, $filter, $http, url) {
+      $scope.selectedFileName = "";
+    	
+      $scope.selectFile = function () {
+    	  
+      };
+      
+      var options = {
+	    method: 'GET',
+	    url: url + '/list'
+      };
+	  $http(options)
+	    .then(
+	      function (success) {
+		    $scope.list = $filter('orderBy')(success.data, 'name');
+		    $scope.error = null;
+	      }, 
+	      function (error) {
+		    $scope.list = null;  
+	        $scope.error = error.data; 
+	      }
+	    );
+    }
+  );

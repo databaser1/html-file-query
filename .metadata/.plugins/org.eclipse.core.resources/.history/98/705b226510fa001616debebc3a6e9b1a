@@ -1,0 +1,7 @@
+angular.module('app', ['ngAnimate']);
+angular.module('app').config(['$controllerProvider', function($controllerProvider) {
+  $controllerProvider.allowGlobals();
+}]);
+
+angular.module('app')
+  .value('url', 'http://localhost:8080/list');

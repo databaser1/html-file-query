@@ -1,0 +1,31 @@
+.ng-hide-add,
+.ng-hide-remove {
+  transition: all linear 1s;
+  display: block !important;
+}
+
+.ng-hide-add.ng-hide-add-active,
+.ng-hide-remove {
+  opacity: 0;
+}
+
+.ng-hide-add,
+.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+.layout-main *:not(.ui-splitbar){
+  background : #eee no-repeat center;
+}
+ 
+ 
+.layout-main .center-back{
+}
+.layout-main .north-back{
+}
+.layout-main .south-back{
+}
+.layout-main .east-back{
+}
+.layout-main .west-back{
+}

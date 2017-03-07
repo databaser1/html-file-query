@@ -1,0 +1,21 @@
+angular.module('app', ['ngAnimate']);
+angular.module('app').config(['$controllerProvider', function($controllerProvider) {
+  $controllerProvider.allowGlobals();
+}]);
+
+angular.module('app')
+  .value('url', '');
+
+angular.module('app')
+  .controller('htmlFileListController', function($scope, $http, url) {
+    var options = {
+	  method: 'GET',
+	  url: url + '/list'
+    };
+	$http(options)
+	  .then(function (success) {
+		$scope.list = success.data;
+	  }, function (error) {
+		  $scope.list = error.data; 
+	  });
+  });
