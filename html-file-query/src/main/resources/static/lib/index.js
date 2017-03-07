@@ -15,6 +15,7 @@ app.controller(
   'htmlFileListController', 
   function($scope, $filter, $http, $sce, url) {
     $scope.selectedFileName = null;
+    $scope.selectedFileBasename = null;
     $scope.selectedFileUrl = null;
     $scope.htmlText = null;
 
@@ -31,8 +32,7 @@ app.controller(
     };
     
     var browser = $('#html-browser');
-    browser
-    .on('load', function () {
+    browser.on('load', function () {
       var element = $(this);
       var contents = element.contents();
       $scope.$apply(function () {
@@ -41,21 +41,102 @@ app.controller(
         $scope.editor.gotoLine(0, 0);
         $scope.editor.renderer.scrollCursorIntoView({row: 0, column: 0}, 0);
       });
-    })
+      
+      if ($scope.fileLoopStarted) {
+    	  $scope.query();
+    	  $scope.create(true);
+    	  $scope.selectFileNext();
+      }
+    });
     $scope.browser = browser;
         	
     $scope.selectFile = function (file) {
       $scope.selectedFileName = file.name;
+      $scope.selectedFileBasename = file.basename;
       $scope.selectedFileUrl = $sce.trustAsResourceUrl(url + '/data/' + file.name);
-    };
-    
-    $scope.query = function () {
-      var input = $('#query-input').find('textarea').val();
-      var result = $scope.browser.contents().find(input);
-      var output = result ? JSON.stringify(result.html()) : '(nothing found)';
-      $('#query-output').find('textarea').val(output);
+      $scope.browser.attr("src", $scope.selectedFileUrl);
     };
 
+    $scope.fileLoopStarted = false;
+    $scope.fileIndex = 0;
+    $scope.selectFileNext = function () {
+    	if (!$scope.list || !$scope.list.length || $scope.fileIndex < 0 || $scope.fileIndex >= $scope.list.length) {
+    		$scope.fileLoopStarted = false;
+    		return;
+    	}
+    	$scope.fileLoopStarted = true;
+		var file = $scope.list[$scope.fileIndex++];
+		$scope.selectFile(file);		
+    }
+    $scope.stop = function () {
+    	 $scope.fileLoopStarted = false;
+    }
+    
+    $scope.resultCount = 0;
+    $scope.query = function () {
+      var outputHtml = Number($('#result-mode').val());
+      var input = $('#query-input').find('textarea').val();
+      var result = $scope.browser.contents().find(input);
+      var output = [];
+      for (var i = 0; i < result.length; i++) {
+        if (outputHtml)
+    	  output.push(result[i].innerHTML);
+        else
+      	  output.push(result[i].innerText);
+      }
+      var outputStr = JSON.stringify(output);
+      outputStr = outputStr.replace(/\\n/g, ' ');
+      $('#query-output').find('textarea').val(outputStr);
+      $scope.resultCount = result.length;
+    };
+    
+    $scope.create = function (append) {
+      var outputStr = $('#query-output').find('textarea').val();
+      var output = JSON.parse(outputStr);
+      var expression = new RegExp($('#query-regexp').find('textarea').val(), 'i');
+      var elementStr;
+      var extraction;
+      var patternStr = $('#query-pattern').find('textarea').val();
+      var tempResult;
+      var queryFinal = '';
+      if (output && output.length) {
+   	    for (var i = 0; i < output.length; i++) {
+          elementStr = output[i];  	    	  
+    	  extraction = expression.exec(elementStr);
+    	  tempResult = patternStr;
+    	  tempResult = tempResult.replace(/\{basename\}/g, $scope.selectedFileBasename);
+    	  tempResult = tempResult.replace(/\{index\}/g, $scope.fileIndex);
+    	  tempResult = tempResult.replace(/\{0\}/g, extraction && extraction.length > 0 ? extraction[0] : '');
+    	  tempResult = tempResult.replace(/\{1\}/g, extraction && extraction.length > 1 ? extraction[1] : '');
+    	  tempResult = tempResult.replace(/\{2\}/g, extraction && extraction.length > 2 ? extraction[2] : '');
+    	  tempResult = tempResult.replace(/\{3\}/g, extraction && extraction.length > 3 ? extraction[3] : '');
+    	  tempResult = tempResult.replace(/\{4\}/g, extraction && extraction.length > 4 ? extraction[4] : '');
+    	  tempResult = tempResult.replace(/\{5\}/g, extraction && extraction.length > 5 ? extraction[5] : '');
+    	  tempResult = tempResult.replace(/\{6\}/g, extraction && extraction.length > 6 ? extraction[6] : '');
+    	  tempResult = tempResult.replace(/\{7\}/g, extraction && extraction.length > 7 ? extraction[7] : '');
+    	  tempResult = tempResult.replace(/\{8\}/g, extraction && extraction.length > 8 ? extraction[8] : '');
+    	  tempResult = tempResult.replace(/\{9\}/g, extraction && extraction.length > 9 ? extraction[9] : '');
+    	  queryFinal += tempResult + '\n';
+   	    }
+      }
+      
+   	  var textarea = $('#query-final').find('textarea');
+      if (append) {
+    	var value = textarea.val();
+    	value += queryFinal;
+    	textarea.val(value);
+      }
+      else
+        textarea.val(queryFinal);
+
+    };
+    
+    $scope.createAll = function () {
+    	$('#query-final').find('textarea').val('');
+    	$scope.fileIndex = 0;
+    	$scope.selectFileNext();
+    };
+    
     var options = {
       method: 'GET',
       url: url + '/list'

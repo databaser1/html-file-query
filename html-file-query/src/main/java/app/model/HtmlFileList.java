@@ -6,12 +6,24 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import app.model.HtmlFile;
 
 public class HtmlFileList {
 	private List<HtmlFile> htmlFileList;
+	private static String dataFolder = "data";
 	
+
 	public HtmlFileList() {
+		htmlFileList = new ArrayList<HtmlFile>();
+		loadAll();
+	}
+
+	public HtmlFileList(String appDataFolder) {
+	    if (appDataFolder != null && dataFolder != appDataFolder)
+			dataFolder = appDataFolder;
+		
 		htmlFileList = new ArrayList<HtmlFile>();
 		loadAll();
 	}
@@ -20,7 +32,7 @@ public class HtmlFileList {
 		htmlFileList.clear();
 		
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		String path = classLoader.getResource("data").getPath();
+		String path = classLoader.getResource(dataFolder).getPath();
 		File dataFolder = new File(path);
 		File[] htmlFiles = dataFolder.listFiles(
 			new FilenameFilter() {
@@ -45,7 +57,7 @@ public class HtmlFileList {
 	public static String getHtml(String fileName) {
 		String html = "<h1>Resource not found<h1>";
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		String path = classLoader.getResource("data").getPath() + "/" + fileName + ".html";
+		String path = classLoader.getResource(dataFolder).getPath() + "/" + fileName + ".html";
 
     	try {
 	        html = new String(Files.readAllBytes(Paths.get(path)));
