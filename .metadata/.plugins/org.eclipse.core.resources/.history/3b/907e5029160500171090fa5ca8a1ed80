@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+
+  <script src="bower_components/angular/angular.js"></script>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	
+  <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/jquery-ui.css">
+	<script src="bower_components/jquery-ui/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="lib/index.css">
+  <script src="lib/index.js"></script>
+
+</head>
+
+<body ng-app='app'>
+
+<div class="layout-main" ng-controller="planReaderController">
+  <div class="layout-row-top">
+      <input type="date" class="ui-widget-content ui-corner-all">
+  </div>
+  <div class="layout-row-middle">
+    <div class="layout-col-left">
+    </div>
+    <div class="layout-col-right">
+   </div>
+  <div class="layout-row-bottom"></div>
+</div>
+
+
+</body>
+
+</html>

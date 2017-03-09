@@ -1,0 +1,21 @@
+var app = angular.module('app', []);
+
+app.config(
+  [
+    '$controllerProvider', 
+    function($controllerProvider) {
+      $controllerProvider.allowGlobals();
+    }
+  ]
+);
+
+app.value('url', '');
+
+app.controller(
+  'planReaderController', 
+  function($scope, url) {
+    var date = new Date();
+    var dateStr = String(date.getFullYear()) + '-' + String(date.getMonth() + 1) + '-' + String(date.getDate());
+    $('#date-picker').val(today);
+  }
+);

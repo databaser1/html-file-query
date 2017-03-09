@@ -1,0 +1,18 @@
+var app = angular.module('app', []);
+
+app.config(
+  [
+    '$controllerProvider', 
+    function($controllerProvider) {
+      $controllerProvider.allowGlobals();
+    }
+  ]
+);
+
+app.value('url', '');
+
+app.controller(
+  'planReaderController', 
+  function($scope, url) {
+  }
+);

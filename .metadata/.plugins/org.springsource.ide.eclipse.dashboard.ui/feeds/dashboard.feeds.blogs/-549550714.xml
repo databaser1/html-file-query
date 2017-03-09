@@ -5,7 +5,31 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2017-03-07T20:44:00Z</updated>
+  <updated>2017-03-09T18:40:18Z</updated>
+  <entry>
+    <title>Dependency Management Plugin 1.0.1.RELEASE</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/03/09/dependency-management-plugin-1-0-1-release" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2017-03-09:2865</id>
+    <updated>2017-03-09T18:40:18Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="https://github.com/spring-gradle-plugins/dependency-management-plugin"&gt;Gradle dependency management plugin&lt;/a&gt; 1.0.1.RELEASE is now available from Maven Central, Bintray, and the &lt;a href="https://plugins.gradle.org/plugin/io.spring.dependency-management"&gt;Gradle Plugin Portal&lt;/a&gt;. This maintenance release fixes a &lt;a href="https://github.com/spring-gradle-plugins/dependency-management-plugin/milestone/21?closed=1"&gt;handful of issues&lt;/a&gt; and is a recommended upgrade for all users of the plugin.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Tips: Server Sent Events (SSE)</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/03/08/spring-tips-server-sent-events-sse" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2017-03-07:2862</id>
+    <updated>2017-03-08T01:01:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hi Spring fans! in this installment, we&amp;rsquo;ll look at server sent events as implemented with Spring MVC and Spring WebFlux, the reactive web stack in the coming Spring Framework 5. &lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/2To3_mYT2hc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
   <entry>
     <title>Spring Roo 2.0 RC1 released</title>
     <link rel="alternate" href="https://spring.io/blog/2017/03/07/spring-roo-2-0-rc1-released" />
@@ -56,28 +80,6 @@
 &lt;p&gt;Spring Roo Team.&lt;/p&gt;</content>
   </entry>
   <entry>
-    <title>Spring IO Platform Athens-SR4</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/03/07/spring-io-platform-athens-sr4" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Andy Wilkinson</name>
-    </author>
-    <id>tag:spring.io,2017-03-06:2860</id>
-    <updated>2017-03-07T20:43:12Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; Athens-SR4 is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.spring.platform"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring AMQP 1.6.8&lt;/li&gt;
-  &lt;li&gt;Spring Boot 1.4.5&lt;/li&gt;
-  &lt;li&gt;Spring Data Hopper SR8&lt;/li&gt;
-  &lt;li&gt;Spring Framework 4.3.7&lt;/li&gt;
-  &lt;li&gt;Spring Integration 4.3.8&lt;/li&gt;
-  &lt;li&gt;Spring Security OAuth 2.0.13&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Athens-SR4/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
     <title>Spring IO Platform Brussels-SR1</title>
     <link rel="alternate" href="https://spring.io/blog/2017/03/07/spring-io-platform-brussels-sr1" />
     <category term="releases" label="Releases" />
@@ -86,7 +88,7 @@
     </author>
     <id>tag:spring.io,2017-03-07:2863</id>
     <updated>2017-03-07T20:43:00Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; Brussels-SR1 is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.spring.platform"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; Brussels-SR1 is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.spring.platform%22%20AND%20a%3A%22platform-bom%22"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Spring AMQP 1.7.1&lt;/li&gt;
@@ -100,6 +102,28 @@
 &lt;/ul&gt;
 &lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Brussels-SR1/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring IO Platform Athens-SR4</title>
+    <link rel="alternate" href="https://spring.io/blog/2017/03/07/spring-io-platform-athens-sr4" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2017-03-06:2860</id>
+    <updated>2017-03-07T20:43:00Z</updated>
+    <content type="html">&lt;p&gt;I am pleased to announce that &lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; Athens-SR4 is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22io.spring.platform%22%20AND%20a%3A%22platform-bom%22"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring AMQP 1.6.8&lt;/li&gt;
+  &lt;li&gt;Spring Boot 1.4.5&lt;/li&gt;
+  &lt;li&gt;Spring Data Hopper SR8&lt;/li&gt;
+  &lt;li&gt;Spring Framework 4.3.7&lt;/li&gt;
+  &lt;li&gt;Spring Integration 4.3.8&lt;/li&gt;
+  &lt;li&gt;Spring Security OAuth 2.0.13&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The versions of a number of third-party dependencies have also been updated.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Athens-SR4/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>This Week in Spring - March 7th, 2017</title>
@@ -122,7 +146,7 @@
   &lt;li&gt;The folks at Solace, makers of a message broker, have put together a nice post &lt;a href="https://solace.com/blog/devops/solace-java-meet-spring-boot-starters"&gt;introducing their Solace Spring Boot starters&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;The NewStack has &lt;a href="https://thenewstack.io/apache-geode-spawns-sorts-memory-things/"&gt;a nice look at Apache Geode&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;while this has nothing to do with Pivotal, it&amp;rsquo;s very interesting: &lt;a href="https://www.youtube.com/watch?v=7R-Y2DwWOr0"&gt;former Rent the Runway CTO Camille Fournier talks about motivating strong (dev) teams&lt;/a&gt;. Worth a watch!&lt;/li&gt;
-  &lt;li&gt;another great talk from community legends &lt;a href="https://www.youtube.com/watch?v=acnbD_zf7fo"&gt;Matt Raible and Micah Silverman at the Kentucky Spring User Group&lt;/a&gt; on Prospecting the Security Landscape with Spring Boot, Zuul, and Stormpath&lt;/li&gt;
+  &lt;li&gt;another great talk from community legends &lt;a href="https://www.youtube.com/watch?v=acnbD_zf7fo"&gt;Matt Raible and Micah Silverman at the Kansas City Spring User Group&lt;/a&gt; on Prospecting the Security Landscape with Spring Boot, Zuul, and Stormpath&lt;/li&gt;
   &lt;li&gt;Spring Data lead &lt;a href="https://spring.io/blog/2017/03/02/spring-data-ingalls-sr1-and-hopper-sr8-released"&gt;Oliver Gierke just announced the Ingalls SR1 and Hopper SR8 releases&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;I liked this very interesting Twitter discussion starting with the Spring team&amp;rsquo;s &lt;a href="https://twitter.com/rob_winch/status/837741123552571392"&gt;Rob Winch looking for good options for integration tests&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
@@ -540,57 +564,5 @@ In the process of addressing above mentioned instability patterns, we have built
 &lt;/ul&gt;
 &lt;p&gt;The versions of numerous third-party dependencies have also been updated.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/Brussels-RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow 1.2 M1 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/02/15/spring-cloud-data-flow-1-2-m1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Thomas Risberg</name>
-    </author>
-    <id>tag:spring.io,2017-02-15:2844</id>
-    <updated>2017-02-15T14:23:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team, I am excited to announce the release of the first milestone of Spring Cloud Data Flow 1.2. &lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; A great way to start using this new release(s) is to follow the &lt;a href="http://cloud.spring.io/spring-cloud-dataflow/#spring-cloud-data-flow-implementations"&gt;release matrix&lt;/a&gt; on the project page, which includes the download coordinates and the links to the reference guide.&lt;/p&gt;
-&lt;p&gt;Over the last few weeks, we have added new features and improvements to the overall orchestration of data microservices. The following new features were included in the 1.2.0.M1 release: &lt;/p&gt;&lt;h3&gt;&lt;a href="#core" class="anchor" name="core"&gt;&lt;/a&gt;Core&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduce dedicated prefixes for deployment properties. Using the deployer properties is as simple as &lt;code&gt;deployer.&amp;lt;appname&amp;gt;.xxx&lt;/code&gt; as opposed to &lt;code&gt;app.&amp;lt;appname&amp;gt;.spring.cloud.deployer.xxx&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Introduce a new REST-API controller and shell support to cleanup Task Executions&lt;/li&gt;
-  &lt;li&gt;Foundation work to consolidate the use of controllers between Task deployments and Task Executions&lt;/li&gt;
-  &lt;li&gt;Consolidate REST-API call traces and return codes for consistency&lt;/li&gt;
-  &lt;li&gt;Adds &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.2.0.M1/reference/htmlsingle/#customizing-authorization"&gt;role-based access control&lt;/a&gt; to define who has access to create, deploy, destroy, or view streams/tasks. This works seamlessly in coordination with the supported &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.2.0.M1/reference/htmlsingle/#configuration-security"&gt;authentication methods&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Performance optimizations to “stream list” operation. Instead of making individual calls for each app associated with the stream, the newly introduced &lt;code&gt;MultiStateAppDeployer&lt;/code&gt; SPI operation invokes a call per stream that queries all the application statuses in a single network call&lt;/li&gt;
-  &lt;li&gt;Improves error reporting for “stream list” operation&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#dashboard" class="anchor" name="dashboard"&gt;&lt;/a&gt;Dashboard&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Adds a convenient option in “About” tab from the Dashboard to download compatible Shell application&lt;/li&gt;
-  &lt;li&gt;Adds connectivity between Tasks and Batch-jobs in the Dashboard. The batch-job “details view” can be accessed from the Task-list page and likewise, the task “details view” can be accessed from the Batch-list page.&lt;/li&gt;
-  &lt;li&gt;Adds role-based access control integration to the Dashboard&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#a-href-https-github-com-spring-cloud-stream-app-starters-out-of-the-box-stream-applications-a" class="anchor" name="a-href-https-github-com-spring-cloud-stream-app-starters-out-of-the-box-stream-applications-a"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-cloud-stream-app-starters/"&gt;Out-of-the-box Stream Applications&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Following new applications were added and it is targeted to be released in the upcoming &lt;a href="http://docs.spring.io/spring-cloud-stream-app-starters/docs/Bacon.BUILD-SNAPSHOT/reference/html/"&gt;Bacon release-train&lt;/a&gt;:&lt;br/&gt;&lt;ul&gt;&lt;br/&gt; &lt;li&gt;MongoDB Sink&lt;/li&gt;&lt;br/&gt; &lt;li&gt;PGCopy Sink&lt;/li&gt;&lt;br/&gt; &lt;li&gt;Aggregator Processor&lt;/li&gt;&lt;br/&gt; &lt;li&gt;Header-enricher Processor&lt;/li&gt;&lt;br/&gt;&lt;/ul&gt;&lt;/li&gt;
-  &lt;li&gt;Add improvements to core app generation framework in the app-starters project that allows selectively upgrading dependent release versions. We can independently upgrade Spring Boot, Spring Integration or any other dependency at each application level and generate kafka, rabbitmq, or any other binder based applications more easily.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Review the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/milestone/13?closed=1"&gt;1.2.0.M1 (core)&lt;/a&gt; / &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-ui/milestone/12?closed=1"&gt;1.2.0.M1 (ui)&lt;/a&gt; release markers to learn more about the incremental improvements. &lt;/p&gt;&lt;h3&gt;&lt;a href="#next-milestone" class="anchor" name="next-milestone"&gt;&lt;/a&gt;Next Milestone&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Include core foundation work to support Docker artifacts as first-class citizen in shell, dsl, and the UI.&lt;/li&gt;
-  &lt;li&gt;The ability to orchestrate “composition of batch-jobs or tasks” is making progress. A new set of DSL primitives to support this from shell/UI is underway, too.&lt;/li&gt;
-  &lt;li&gt;Significant refactoring of core constructs around controllers, dsl, and REST-APIs underway to support “application grouping” functionality. Apart from the ability to orchestrate Spring Cloud Stream or Spring Cloud Task applications, this new model would allow orchestration for any Spring Boot application. There will be an option to define the application groups and such “groups” can be tagged by &amp;ldquo;labels&amp;rdquo;, so it will be then easy to perform group operations at the “label” level such group-deploy or group-destroy. For example, a stream is a specialization of a “group” that includes source, processor(s), and sink type of applications in it.&lt;/li&gt;
-  &lt;li&gt;We envision further evolving “application grouping” capability to stream versioning, too. Stay tuned!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;A few of us from the Spring Cloud Data Flow team will be at &lt;a href="https://devnexus.com/s/index"&gt;DevNexus&lt;/a&gt; next week. Please do consider attending the &lt;a href="https://spring.io/blog/2017/02/01/spring-team-at-devnexus-2017"&gt;sessions&lt;/a&gt; to learn more about these feature capabilities.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: JOOQ</title>
-    <link rel="alternate" href="https://spring.io/blog/2017/02/15/spring-tips-jooq" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2017-01-26:2811</id>
-    <updated>2017-02-15T01:01:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll look at jOOQ (a fluent API for typesafe SQL query construction and execution) to quickly and easily interface with our SQL database.&lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/j5QqHSIEcPE?list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
