@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="0" key="org.eclipse.wst.jsdt.uiformatter_pagemodify_dialog.preferred_y"/>
+	<item value="837" key="org.eclipse.wst.jsdt.uiformatter_pagemodify_dialog.preferred_height"/>
+	<item value="0" key="org.eclipse.wst.jsdt.uiformatter_pagemodify_dialog.preferred_x"/>
+	<item value="/home/yong/Develop/sts-bundle/sts-3.8.3.RELEASE" key="org.eclipse.wst.jsdt.ui.codeformatter.savepath"/>
+	<item value="0" key="org.eclipse.wst.jsdt.uiformatter_page.white_space.java_view.inner"/>
+	<item value="0" key="org.eclipse.wst.jsdt.uiformatter_page.white_space_tab_page.node"/>
+	<item value="3" key="org.eclipse.wst.jsdt.uiformatter_page.modify_dialog_tab_page.last_focus_index"/>
+	<item value="1" key="org.eclipse.wst.jsdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
+	<item value="1027" key="org.eclipse.wst.jsdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="JavaElementSearchActions">

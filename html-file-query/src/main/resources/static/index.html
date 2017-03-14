@@ -45,7 +45,10 @@
       <div class="control-panel">
         <div id="query-input" class="input-group">
           <span class="input-group-addon">Selector:</span>
-          <textarea class="form-control custom-control" rows="1" style="resize:none">.iso6393zho</textarea>     
+          <textarea class="form-control custom-control" rows="1" style="resize:none">
+.plan-pieces a
+.iso6393zho
+          </textarea>     
         </div>
         <button type="button" class="btn btn-default" ng-click="showFind()">
           <span class="glyphicon glyphicon-arrow-left"></span> Show Find Tool
@@ -63,11 +66,17 @@
         </div>
         <div id="query-regexp" class="input-group">
           <span class="input-group-addon">RegExp:</span>
-          <textarea class="form-control custom-control" rows="1" style="resize:none">(.+)</textarea>     
+          <textarea class="form-control custom-control" rows="1" style="resize:none">
+(\w+)\W+(\d+)
+(.+)
+          </textarea>     
         </div>
         <div id="query-pattern" class="input-group">
           <span class="input-group-addon">Pattern:</span>
-          <textarea class="form-control custom-control" rows="1" style="resize:none">echo '{1}' > {basename}.{index}.html</textarea>     
+          <textarea class="form-control custom-control" rows="1" style="resize:none">
+lynx -source https://www.bible.com/bible/140/{1}.{2}.rcuvss > {file_basename}.{seq_99}.{1}.{2}.html
+echo '{1}' > {file_basename}.html
+          </textarea>     
         </div>
         <button type="button" class="btn btn-default" ng-click="create()"> 
           <span class="glyphicon glyphicon-arrow-down"></span> Create

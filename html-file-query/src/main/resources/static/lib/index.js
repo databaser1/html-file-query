@@ -109,8 +109,10 @@ app.controller(
           elementStr = output[i];  	    	  
     	  extraction = expression.exec(elementStr);
     	  tempResult = patternStr;
-    	  tempResult = tempResult.replace(/\{basename\}/g, $scope.selectedFileBasename);
-    	  tempResult = tempResult.replace(/\{index\}/g, $scope.fileIndex);
+    	  tempResult = tempResult.replace(/\{file_basename\}/g, $scope.selectedFileBasename);
+    	  tempResult = tempResult.replace(/\{file_index\}/g, $scope.fileIndex);
+        tempResult = tempResult.replace(/\{seq_99\}/g, (100 + i + 1).toString().substring(1));
+        tempResult = tempResult.replace(/\{seq_999\}/g, (1000 + i + 1).toString().substring(1));
     	  tempResult = tempResult.replace(/\{0\}/g, extraction && extraction.length > 0 ? extraction[0] : '');
     	  tempResult = tempResult.replace(/\{1\}/g, extraction && extraction.length > 1 ? extraction[1] : '');
     	  tempResult = tempResult.replace(/\{2\}/g, extraction && extraction.length > 2 ? extraction[2] : '');
