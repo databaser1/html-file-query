@@ -15,14 +15,14 @@ app.controller(
   'planReaderController', 
   function($scope, $http, url) {
     
-    $scope.date = {
-      value: new Date()
-    };
     $scope.getDate = function (){
-      var dateStr = $('#date-picker').val();
+      var dateStr = $('#date').text();
+      if (!dateStr) {
+        $scope.setDate();
+        return new Date();        
+      }
       var dateParts = dateStr.split('-');
-
-      if (isNaN(dateParts[0]) || isNaN(dateParts[1]) || isNaN(dateParts[2])) {
+      if (dateParts.length < 3 || isNaN(dateParts[0]) || isNaN(dateParts[1]) || isNaN(dateParts[2])) {
         $scope.setDate();
         return new Date();
       }
@@ -42,13 +42,14 @@ app.controller(
     $scope.setDate = function (dateObj) {
       if (!dateObj)
         dateObj = new Date();
-      //var dateParts = [];
-      //dateParts.push(dateObj.getFullYear());
-      //dateParts.push(dateObj.getMonth() + 1);
-      //dateParts.push(dateObj.getDate());
-      //var dateStr = dateParts[0] + '-' + (dateParts[1] < 10 ? '0' + dateParts[1] : dateParts[1]) + '-' + (dateParts[2] < 10 ? '0' + dateParts[2] : dateParts[2]);
-      //$('#date-picker').val(dateStr);
-      $scope.date.value = dateObj;
+      var dateParts = [];
+      dateParts.push(dateObj.getFullYear());
+      dateParts.push(dateObj.getMonth() + 1);
+      dateParts.push(dateObj.getDate());
+      var dateStr = dateParts[0] + '-' + (dateParts[1] < 10 ? '0' + dateParts[1] : dateParts[1]) + '-' + (dateParts[2] < 10 ? '0' + dateParts[2] : dateParts[2]);
+      $('#date').text(dateStr);
+      
+      $scope.getPlan(dateObj);
     };
     
     $scope.dateSpin = function (days) {
@@ -57,7 +58,6 @@ app.controller(
       $scope.setDate(dateObj);
     };
     
-    $scope.plan = null;
     $scope.getPlan = function (dateObj) {
       if (!dateObj)
         dateObj = new Date();
@@ -72,6 +72,18 @@ app.controller(
         function (success) {
           $scope.plan = success.data;
           $scope.error = null;
+          var html = $scope.plan ? $scope.plan : '（无阅读计划）';
+          $('#plan-container').html(html);
+          var anchors = $('#plan-container .content-anchor');
+          var titles = $('#plan-container .content-title');
+          var linkPanel = $('#link-panel');
+          for (var i = 0; i < anchors.length; i++) {
+            var anchor = $(anchors[i]);
+            var title = $(titles[i]);
+            var id = anchor.attr('id');
+            var text = title.text();
+            linkPanel.append('<a class="content-link" href="#' + id + '">' + text + '</a>');
+          }
         }, 
         function (error) {
           $scope.plan = null;  
@@ -79,18 +91,7 @@ app.controller(
         }
       );
     };
-    $scope.showPlan = function () {
-      var html = $scope.plan ? $scope.plan : '（无阅读计划）';
-      $('#plan-container').html(html);
-    };
     
-    $scope.dateChange = function () {
-      var dateObj = $scope.date.value;
-      $scope.getPlan(dateObj);
-      $scope.showPlan();
-    };
-    $scope.$watch('date.value', function() {
-      $scope.dateChange();
-    });
+    $scope.setDate();
   }
 );

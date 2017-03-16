@@ -60,9 +60,9 @@ private static String planFolder = "plan";
 		for(File file : files) {
 		  fileName = file.getName();
 		  nameParts = fileName.split("\\.");
-		  bookCode = nameParts[2];
+		  bookCode = nameParts[3];
 		  bookName = bookList.get(bookCode);
-		  chapterNum = nameParts[3];
+		  chapterNum = nameParts[4];
 	    path = file.getPath();
 	    content = "";
       try {
@@ -70,7 +70,7 @@ private static String planFolder = "plan";
       }
       catch (Exception ex) {
       }
-      content = "<div class='plan-content'><h3><a class='content-anchor' id='" + bookCode + "." + chapterNum + "'></a>" + bookName + " " + chapterNum + "</h3>" + content + "</div>";
+      content = "<div class='plan-content'><a class='content-anchor' id='" + bookCode + "." + chapterNum + "'></a><span class='content-title'>" + bookName + " " + chapterNum + "</span>" + content + "</div>";
       html += content;
 		}
     	

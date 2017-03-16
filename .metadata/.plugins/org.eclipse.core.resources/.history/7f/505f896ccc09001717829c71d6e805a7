@@ -1,0 +1,96 @@
+var app = angular.module('app', []);
+
+app.config(
+  [
+    '$controllerProvider', 
+    function($controllerProvider) {
+      $controllerProvider.allowGlobals();
+    }
+  ]
+);
+
+app.value('url', '');
+
+app.controller(
+  'planReaderController', 
+  function($scope, $http, url) {
+    
+    var datePicker = $('#date-picker');
+    datePicker.on('change', function () {
+      $scope.dateChange();
+    });
+    $scope.datePicker = datePicker;
+    
+    $scope.getDate = function (){
+      var dateStr = $scope.datePicker.val();
+      var dateParts = dateStr.split('-');
+
+      if (isNaN(dateParts[0]) || isNaN(dateParts[1]) || isNaN(dateParts[2])) {
+        $scope.setDate();
+        return new Date();
+      }
+      
+      var timeObj = new Date();
+      var dateObj = new Date(
+        dateParts[0], 
+        dateParts[1] - 1, 
+        dateParts[2], 
+        timeObj.getHours(), 
+        timeObj.getMinutes(),
+        timeObj.getSeconds(),
+        timeObj.getMilliseconds()
+      );
+      return dateObj;
+    };
+    $scope.setDate = function (dateObj) {
+      if (!dateObj)
+        dateObj = new Date();
+      var dateParts = [];
+      dateParts.push(dateObj.getFullYear());
+      dateParts.push(dateObj.getMonth() + 1);
+      dateParts.push(dateObj.getDate());
+      var dateStr = dateParts[0] + '-' + (dateParts[1] < 10 ? '0' + dateParts[1] : dateParts[1]) + '-' + (dateParts[2] < 10 ? '0' + dateParts[2] : dateParts[2]);
+      $scope.datePicker.val(dateStr);
+    };
+    $scope.setDate();
+    
+    $scope.dateSpin = function (days) {
+      var dateObj = $scope.getDate();
+      dateObj.setDate(dateObj.getDate() + days);
+      $scope.setDate(dateObj);
+    };
+    
+    $scope.plan = null;
+    $scope.getPlan = function (dateObj) {
+      if (!dateObj)
+        dateObj = new Date();
+      
+      var monthNum = dateObj.getMonth() + 1;
+      var dateNum = dateObj.getDate();
+      var options = {
+          method: 'GET',
+          url: url + '/plan' + '/' + monthNum + '/' + dateNum
+      };
+      $http(options).then(
+        function (success) {
+          $scope.plan = success.data;
+          $scope.error = null;
+        }, 
+        function (error) {
+          $scope.plan = null;  
+          $scope.error = error.data; 
+        }
+      );
+    };
+    $scope.showPlan = function () {
+      var html = $scope.plan ? $scope.plan : '（无阅读计划）';
+      $('#plan-container').html(html);
+    };
+    
+    $scope.dateChange = function () {
+      var dateObj = $scope.date.value;
+      $scope.getPlan(dateObj);
+      $scope.showPlan();
+    };
+  }
+);
